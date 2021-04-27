@@ -16,7 +16,7 @@ public:
             // If current sum is greater than max sum, then update max sum with current sum
             if(max_sum < current_sum) max_sum = current_sum;
           
-            // If current sum is less than zero, then reintialise it to zero, therebyy forgetting negative current sum
+            // If current sum is less than zero, then reintialise it to zero, thereby forgetting negative current sum
             if(current_sum < 0) current_sum = 0;
         }
         return max_sum;
