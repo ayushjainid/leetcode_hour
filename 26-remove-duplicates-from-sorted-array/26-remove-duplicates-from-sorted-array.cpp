@@ -2,13 +2,18 @@ class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
         
-        int left = 0;
-        for(int right = 1; right < nums.size(); right++) {
-            if(nums[left] != nums[right]) {
-                left++;
-                nums[left] = nums[right];
+        //Keeping track of index of last unique number
+        int unique = 0;
+        for(int start = 1; start < nums.size(); start++) {
+            
+            //When unique number is found on start index, increment the unique counter and 
+            //then swap the number on unique++ position with new unique number found
+            if(nums[start] != nums[unique]) {
+                unique++;
+                nums[unique] = nums[start];
             }
         }
-        return left+1;
+        //Returning unique+1 as number of digits is expected instead of index
+        return unique+1;
     }
 };
