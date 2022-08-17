@@ -2,8 +2,9 @@ class Solution {
 public:
     int threeSumSmaller(vector<int>& nums, int target) {
         sort(nums.begin(), nums.end());
-        if(nums.size()<3)
-        return 0;
+        if(nums.size()<3) {
+            return 0;
+        }
         int count = 0;
         for(int first = 0; first < nums.size() - 2; first++) {
             count += findPair(nums, target-nums[first], first);
