@@ -31,7 +31,7 @@ public:
                             right--;
                         }
                     }
-                    else if(nums[left] + nums[right] < new_target) {
+                    else if(static_cast<long long>(nums[left]) + static_cast<long long>(nums[right]) < new_target) {
                         left++;
                     }
                     else {
